@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import Login from './login';
+// import ReactModel from 'react-model';
 
 export default function Header() {
+    const [visible,setvisible] = useState(false);
   return (
     <header>
         <nav className="flex items-center justify-between py-5">
@@ -36,8 +39,12 @@ export default function Header() {
                     </Link>
                 </ul>
                 <button className="bg-yellow-400 hover:bg-yellow-600 text-white px-5 py-2 rounded-xl text-xs md:text-base">Post Property Free</button>
-                <button className="border border-solid border-gray-300 px-5 py-2 rounded-xl text-xs md:text-base">Login / Signup</button>
+                <Link to={'/login'}>
+                    <button   button className="border border-solid border-gray-300 px-5 py-2 rounded-xl text-xs md:text-base">Login / Signup</button>
+                </Link>
+                
             </div>
+            
         </nav>
     </header>
   )

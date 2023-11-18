@@ -6,6 +6,8 @@ import Agencies from "./pages/Agencies"
 import UnitConvertor from "./pages/UnitConvertor"
 import About from "./pages/About"
 import Header from "./components/Header"
+import LoginPage from "./pages/LoginPage"
+import SignupPage from "./pages/SignupPage"
 
 export default function App() {
   return (
@@ -19,6 +21,8 @@ export default function App() {
             <Route path="/agencies" element={<Agencies/>}/>
             <Route path="/unit-convertor" element={<UnitConvertor/>}/>
             <Route path="/about" element={<About/>}/>
+            <Route path="/login" element={<LoginPage/>}/>
+            <Route path="signup" element={<SignupPage/>}/>
           </Routes>
       </div>
     </BrowserRouter>
